@@ -7,35 +7,35 @@ body {
   font-family: sans-serif;
   text-align: center;
   background-color: #DFD3D3;
-  margin: 0; /* Remove default body margins */
-  padding: 0; /* Remove default body padding */
-  display: flex; /* Enable flexbox for easier centering */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  min-height: 100vh; /* Ensure content fills the viewport */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* Added viewport meta tag for better mobile responsiveness */
+  -webkit-text-size-adjust: 100%; /* Prevents text scaling in iOS */
 }
 
 #container {
-  width: 90%; /* Make it responsive */
-  max-width: 422px; /* Set a maximum width */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #B8B0B0;
+   width: 90%;
+    max-width: 300px; /* Reduced max-width for better mobile display */
+    padding: 15px; /* Reduced padding for smaller screens */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #B8B0B0;
 
 }
 
 img {
-  max-width: 90%;
+  max-width: 100%; /* Ensures image doesn't exceed container width */
   height: auto;
-  border-radius: 10px; /* Reduced border radius for better fit */
-  display: block; /* Prevents extra space below image */
-  margin: 0 auto 10px auto; /* Center the image */
-
+  border-radius: 10px; /* Slightly reduced border-radius */
 }
 
 button {
-  padding: 10px 20px;
+  padding: 8px 15px; /* Reduced padding */
+  font-size: 16px; /* Slightly smaller font size */
   color: white;
   border: none;
   border-radius: 5px;
