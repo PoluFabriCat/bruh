@@ -7,6 +7,12 @@ body {
   font-family: sans-serif;
   text-align: center;
   background-color: #DFD3D3;
+  margin: 0; /* Remove default body margins */
+  padding: 0; /* Remove default body padding */
+  display: flex; /* Enable flexbox for easier centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Ensure content fills the viewport */
 }
 
 #container {
@@ -18,7 +24,7 @@ body {
 }
 
 img {
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
   border-radius: 20px;
 }
