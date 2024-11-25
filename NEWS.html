@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<title>Vahui_Box</title>
+<style>
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #FFE8DF;
+  border-radius: 10px;
+  touch-action: manipulation;
+  user-select: none;
+  height: 100vh;
+  margin: 0;
+}
+
+#container {
+  width: 90%;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #FFFFFF;
+  height: calc(175vh - 13px);
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start;  <-  Это изменение */
+}
+
+</style>
+</head>
+<body>
+
+   <div id="container">
+     <h1>VAHUI_BOX</h1>
+     <p>
+         Подпищечники мои, на этой страничке я буду писать всякую ерунду и никому не нужные статьи. <br>
+         Если вам будет скучно и вы не будете знать чем себя занять, то можете тратить свое драгоценное время в это мусорной яме<br>
+         А пока хочу похвасться смешнявками, которым я пока не могу найти применение:
+     </p>
+           <form method="post">
+        <p><strong>text: Текстовое поле</strong></p>
+        <input type="text" name="username" placeholder="Введите имя пользователя">
+
+        <p><strong></strong></p>
+        <input type="password" name="password" placeholder="Введите пароль"> <br> <br>
+
+        <input type="radio" name="color" value="red" id="red">
+        <label for="red">Красный:</label>
+        <input type="radio" name="color" value="green" id="green" style="color: lightgreen;">
+        <label for="red">Зеленый:</label>
+        <input type="radio" name="color" value="blue" id="blue">
+        <label for="red">Синий:</label> <br> <br>
+
+        <input type="checkbox" name="agree" value="yes"> Согласен с условиями
+        <input type="checkbox" name="agree" value="no"> Не согласен с условиями <br> <br>
+
+        <input type="submit" value="Отправить"> <br> <br>
+
+        <input type="color" name="color" value="#ff0000"> <br> <br>
+
+        <input type="date" name="birthday" value="1990-01-01"> <br> <br>
+
+        <input type="datetime" name="datetime" value="1990-01-01T12:00:00+03:00"> <br> <br>
+
+        <input type="email" name="email" placeholder="Введите ваш email"> <br> <br>
+
+        <input type="month" name="month" value="2022-01"> <br> <br>
+
+        <input type="number" name="age" value="25"> <br> <br>
+
+        <input type="range" name="range" min="0" max="1000" value="50"> <br> <br>
+
+        <input type="tel" name="phone" placeholder="+7(123)456-78-90"> <br> <br>
+
+        <input type="time" name="time" value="12:00"> <br> <br>
+
+        <input type="week" name="week" value="2022-W01"> <br> <br>
+
+        <input type="file" name="file"> <br> <br>
+
+
+    </form>
+   </div>
+
+</body>
+</html>
