@@ -10,7 +10,7 @@ body {
 }
 
 #container {
-  width: 90%;
+  width: 90%; /* Occupies 90% of the viewport width */
   margin: 50px auto;
   padding: 20px;
   border-radius: 10px;
@@ -30,12 +30,8 @@ button {
   border-radius: 5px;
   cursor: pointer;
   background-color: #7C7575;
-  font-size: 24px;
-}
+  font-size: 72px;
 
-#counter {
-  margin-top: 10px;
-  font-size: 18px;
 }
 </style>
 </head>
@@ -44,31 +40,16 @@ button {
 <div id="container">
   <h1>VAHUI_BOX</h1>
   <img id="catImage" src="memes/start.jpeg" alt="WTF"><br><br>
-  <div id="counter">Images Viewed: 0</div> <br>
-  <button onclick="changeImage()">BRUH</button>
+  <button onclick="changeImage()" style="background-color:light;">BRUH</button>
 </div>
 
 <script>
-let images = ["memes/1.png", "memes/2.png", "memes/3.png", "memes/4.png", "memes/5.png", "memes/6.png", "memes/7.png", "memes/8.png", "memes/9.png", "memes/10.png", "memes/11.png", "memes/12.png",];
-let imagesViewed = 0;
-
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-}
+let images = ["memes/mem0.png", "memes/mem1.png", "memes/mem3.jpeg", "memes/mem4.png", "memes/mem5.jpeg", "memes/mem6.jpeg", "memes/mem7.jpeg", ];
+let currentImageIndex = 0;
 
 function changeImage() {
-  if (images.length === 0) {
-    // Reshuffle the array when it's empty
-    images = ["memes/1.png", "memes/2.png", "memes/3.png", "memes/4.png", "memes/5.png", "memes/6.png", "memes/7.png", "memes/8.png", "memes/9.png", "memes/10.png", "memes/11.png", "memes/12.png",];
-    shuffleArray(images);
-  }
-  const nextImage = images.pop();
-  document.getElementById("catImage").src = nextImage;
-  imagesViewed++;
-  document.getElementById("counter").textContent = "Images Viewed: " + imagesViewed;
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+  document.getElementById("catImage").src = images[currentImageIndex];
 }
 </script>
 
