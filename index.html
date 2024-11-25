@@ -10,7 +10,7 @@ body {
 }
 
 #container {
-  width: 90%; /* Occupies 90% of the viewport width */
+  width: 90%;
   margin: 50px auto;
   padding: 20px;
   border-radius: 10px;
@@ -24,14 +24,18 @@ img {
 }
 
 button {
-  padding: 60px 120px;
+  padding: 20px 40px; /* Reduced padding for better proportions */
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   background-color: #7C7575;
-  font-size: 72px;
+  font-size: 24px; /* Reduced font size for better proportions */
+}
 
+#counter {
+  margin-top: 10px;
+  font-size: 18px;
 }
 </style>
 </head>
@@ -40,16 +44,20 @@ button {
 <div id="container">
   <h1>VAHUI_BOX</h1>
   <img id="catImage" src="memes/start.jpeg" alt="WTF"><br><br>
-  <button onclick="changeImage()" style="background-color:light;">BRUH</button>
+  <div id="counter">Images Viewed: 0</div> <br>
+  <button onclick="changeImage()">BRUH</button>
 </div>
 
 <script>
-let images = ["memes/mem0.png", "memes/mem1.png", "memes/mem3.jpeg", "memes/mem4.png", "memes/mem5.jpeg", "memes/mem6.jpeg", "memes/mem7.jpeg", ];
+let images = ["memes/mem0.png", "memes/mem1.png", "memes/mem3.jpeg", "memes/mem4.png", "memes/mem5.jpeg", "memes/mem6.jpeg", "memes/mem7.jpeg"];
 let currentImageIndex = 0;
+let imagesViewed = 0; // Initialize the counter
 
 function changeImage() {
   currentImageIndex = (currentImageIndex + 1) % images.length;
   document.getElementById("catImage").src = images[currentImageIndex];
+  imagesViewed++; // Increment the counter
+  document.getElementById("counter").textContent = "Images Viewed: " + imagesViewed;
 }
 </script>
 
