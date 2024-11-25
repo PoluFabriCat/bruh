@@ -50,7 +50,7 @@ button {
 
 <script>
 let images = ["memes/mem0.png", "memes/mem1.png", "memes/mem3.jpeg", "memes/mem4.png", "memes/mem5.jpeg", "memes/mem6.jpeg", "memes/mem7.jpeg"];
-let imagesViewed = 0; // Initialize the counter
+let imagesViewed = 0;
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -61,14 +61,11 @@ function shuffleArray(array) {
 
 function changeImage() {
   if (images.length === 0) {
-    alert("No more images!");
-    return;
-  }
-  //Shuffle the array if it's the first time or if the array is empty
-  if (imagesViewed === 0 || images.length === 0){
+    // Reshuffle the array when it's empty
+    images = ["memes/mem0.png", "memes/mem1.png", "memes/mem3.jpeg", "memes/mem4.png", "memes/mem5.jpeg", "memes/mem6.jpeg", "memes/mem7.jpeg"];
     shuffleArray(images);
   }
-  const nextImage = images.pop(); //Take the last element of the array and remove it.
+  const nextImage = images.pop();
   document.getElementById("catImage").src = nextImage;
   imagesViewed++;
   document.getElementById("counter").textContent = "Images Viewed: " + imagesViewed;
