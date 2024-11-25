@@ -7,35 +7,24 @@ body {
   font-family: sans-serif;
   text-align: center;
   background-color: #DFD3D3;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  /* Added viewport meta tag for better mobile responsiveness */
-  -webkit-text-size-adjust: 100%; /* Prevents text scaling in iOS */
 }
 
 #container {
-   width: 90%;
-    max-width: 300px; /* Reduced max-width for better mobile display */
-    padding: 15px; /* Reduced padding for smaller screens */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #B8B0B0;
-
+  width: 90%; /* Occupies 90% of the viewport width */
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #B8B0B0;
 }
-
 img {
-  max-width: 100%; /* Ensures image doesn't exceed container width */
+  max-width: 100%;
   height: auto;
-  border-radius: 10px; /* Slightly reduced border-radius */
+  border-radius: 20px;
 }
 
 button {
-  padding: 8px 15px; /* Reduced padding */
-  font-size: 16px; /* Slightly smaller font size */
+  padding: 10px 20px;
   color: white;
   border: none;
   border-radius: 5px;
