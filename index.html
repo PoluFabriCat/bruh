@@ -7,7 +7,7 @@ body {
   font-family: sans-serif;
   text-align: center;
   background-color: #FFE8DF;
-  border-radius: 10px;
+  border-radius: 20px;
   touch-action: manipulation; /* Prevents accidental scrolling on touch devices */
   user-select: none; /* Prevents text selection */
 }
@@ -16,7 +16,7 @@ body {
   width: 90%;
   margin: 50px auto;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #FFFFFF;
 }
@@ -28,14 +28,13 @@ img {
 }
 
 button {
-  padding: 20px 40px; /* Reduced padding for better layout */
-  margin: 10px; /* Added margin for spacing between buttons */
+  padding: 60px 120px;
   color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
   background-color: #888888;
-  font-size: 24px; /* Reduced font size for better readability */
+  font-size: 72px;
 }
 </style>
 </head>
@@ -43,10 +42,24 @@ button {
 
 <div id="container">
   <h1>VAHUI_BOX</h1>
-  <img id="catImage" src="images/icon.png" alt="WTF"> <br> <br>
-  <button onclick="window.location.href='news.html'">NEWS</button>
-  <button onclick="window.location.href='bruh.html'">BRUH</button>
+  <img id="catImage" src="memes/start.jpeg" alt="WTF"> <br> <br>
+  <button onclick="changeImage()">BRUH</button>
 </div>
+
+<script>
+const images = [
+  "memes/1.png", "memes/2.png", "memes/3.png", "memes/4.png", "memes/5.png",
+  "memes/6.png", "memes/7.png", "memes/8.png", "memes/9.png", "memes/10.png",
+  "memes/11.png", "memes/12.png"
+];
+let currentImageIndex = 0;
+const catImage = document.getElementById("catImage"); // Cache the image element
+
+function changeImage() {
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+  catImage.src = images[currentImageIndex];
+}
+</script>
 
 </body>
 </html>
