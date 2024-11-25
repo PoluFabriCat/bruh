@@ -8,32 +8,19 @@ body {
   text-align: center;
   background-color: #FFE8DF;
   border-radius: 10px;
-  /* Add this line */
-  touch-action: manipulation;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-   -khtml-user-select: none; /* Konqueror HTML */
-   -moz-user-select: none; /* Firefox */
-   -ms-user-select: none; /* Internet Explorer/Edge */
-   user-select: none; 
-  touch-action: manipulation;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
+  touch-action: manipulation; /* Prevents accidental scrolling on touch devices */
+  user-select: none; /* Prevents text selection */
 }
 
 #container {
-  width: 90%; /* Occupies 90% of the viewport width */
+  width: 90%;
   margin: 50px auto;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #FFFFFF;
 }
+
 img {
   max-width: 100%;
   height: auto;
@@ -48,7 +35,6 @@ button {
   cursor: pointer;
   background-color: #888888;
   font-size: 72px;
-
 }
 </style>
 </head>
@@ -56,17 +42,22 @@ button {
 
 <div id="container">
   <h1>VAHUI_BOX</h1>
-  <img id="catImage" src="memes/start.jpeg" alt="WTF"><br><br>
-  <button onclick="changeImage()" style="background-color:light;">BRUH</button>
+  <img id="catImage" src="memes/start.jpeg" alt="WTF"> <br> <br>
+  <button onclick="changeImage()">BRUH</button>
 </div>
 
 <script>
-let images = ["memes/1.png", "memes/2.png", "memes/3.png", "memes/4.png", "memes/5.png", "memes/6.png", "memes/7.png", "memes/8.png", "memes/9.png", "memes/10.png", "memes/11.png", "memes/12.png", ];
+const images = [
+  "memes/1.png", "memes/2.png", "memes/3.png", "memes/4.png", "memes/5.png",
+  "memes/6.png", "memes/7.png", "memes/8.png", "memes/9.png", "memes/10.png",
+  "memes/11.png", "memes/12.png"
+];
 let currentImageIndex = 0;
+const catImage = document.getElementById("catImage"); // Cache the image element
 
 function changeImage() {
   currentImageIndex = (currentImageIndex + 1) % images.length;
-  document.getElementById("catImage").src = images[currentImageIndex];
+  catImage.src = images[currentImageIndex];
 }
 </script>
 
